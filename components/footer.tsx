@@ -1,9 +1,15 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Mail, MessageCircle } from "lucide-react"
+import {
+  FaFacebook,
+  FaTelegram,
+  FaLine,
+  FaWhatsapp,
+  FaEnvelope,
+} from "react-icons/fa"
 
 import { Button } from "@/components/ui/button"
-import { APP_NAME, CONTACT } from "@/constants"
+import { APP_NAME, APP_TAGLINE, CONTACT } from "@/constants"
 
 export function Footer() {
   return (
@@ -22,7 +28,7 @@ export function Footer() {
               <div className="min-w-0">
                 <p className="truncate text-sm font-semibold">{APP_NAME}</p>
                 <p className="truncate text-sm text-muted-foreground">
-                  One to One Matchmaking
+                  {APP_TAGLINE}
                 </p>
               </div>
             </div>
@@ -39,7 +45,7 @@ export function Footer() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <MessageCircle className="size-4" />
+                  <FaWhatsapp className="size-4" />
                   WhatsApp
                 </a>
               </Button>
@@ -50,8 +56,41 @@ export function Footer() {
                 className="rounded-full"
               >
                 <a href={`mailto:${CONTACT.email}`}>
-                  <Mail className="size-4" />
+                  <FaEnvelope className="size-4" />
                   Email
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="sm"
+                className="rounded-full"
+              >
+                <a href={CONTACT.facebook} target="_blank" rel="noreferrer">
+                  <FaFacebook className="size-4" />
+                  Facebook
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="sm"
+                className="rounded-full"
+              >
+                <a href={CONTACT.telegram} target="_blank" rel="noreferrer">
+                  <FaTelegram className="size-4" />
+                  Telegram
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="sm"
+                className="rounded-full"
+              >
+                <a href={CONTACT.line} target="_blank" rel="noreferrer">
+                  <FaLine className="size-4" />
+                  Line
                 </a>
               </Button>
             </div>
