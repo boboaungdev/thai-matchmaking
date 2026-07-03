@@ -20,9 +20,7 @@ export default function HomePage() {
           </h1>
           <p className="text-lg text-white/90 md:text-xl">{APP_TAGLINE}</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg">
-              <Link href="/auth">Get Started</Link>
-            </Button>
+            <Button size="lg">Get Started</Button>
             <Button
               asChild
               size="lg"
