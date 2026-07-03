@@ -44,7 +44,7 @@ export function NavBar() {
             priority
           />
           <div className="min-w-0">
-            <p className="truncate text-sm leading-5 font-semibold sm:text-[15px]">
+            <p className="truncate bg-gradient-to-r from-[#cfa14f] via-[#cb5d7a] to-[#cb5d7a] bg-clip-text text-sm leading-5 font-semibold text-transparent sm:text-[15px]">
               {APP_NAME}
             </p>
             <p className="truncate text-xs text-muted-foreground">
@@ -61,9 +61,14 @@ export function NavBar() {
               <Button
                 key={item.href}
                 asChild
-                variant={active ? "secondary" : "ghost"}
+                variant="ghost"
                 size="sm"
-                className={cn("rounded-full px-3", active && "text-foreground")}
+                className={cn(
+                  "relative rounded-full px-3 transition-all",
+                  active &&
+                    "after:absolute after:right-0 after:bottom-0 after:left-0 after:h-0.5 after:bg-gradient-to-r after:from-[#cfa14f] after:to-[#cb5d7a]"
+                )}
+                style={active ? { color: "#cfa14f" } : {}}
               >
                 <Link href={item.href}>{item.label}</Link>
               </Button>
