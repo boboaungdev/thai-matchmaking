@@ -18,6 +18,7 @@ import {
 import { APP_NAME, APP_TAGLINE } from "@/constants"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { LanguageSwitcher } from "@/components/language-switcher"
+import { AppName } from "@/components/app-name"
 import { cn } from "@/lib/utils"
 
 const SITE_NAV_LINKS = [
@@ -44,9 +45,7 @@ export function NavBar() {
             priority
           />
           <div className="min-w-0">
-            <p className="truncate bg-gradient-to-r from-[#cfa14f] via-[#cb5d7a] to-[#cb5d7a] bg-clip-text text-sm leading-5 font-semibold text-transparent sm:text-[15px]">
-              {APP_NAME}
-            </p>
+            <AppName className="truncate text-sm leading-5 font-semibold sm:text-[15px]" />
             <p className="truncate text-xs text-muted-foreground">
               {APP_TAGLINE}
             </p>
@@ -80,7 +79,9 @@ export function NavBar() {
           <ThemeToggle />
           <LanguageSwitcher />
           <div className="hidden items-center gap-2 lg:flex">
-            <Button className="rounded-md">Login</Button>
+            <Button className="rounded-md bg-gradient-to-r from-[#cfa14f] to-[#cb5d7a] font-medium text-white transition-opacity hover:opacity-90">
+              Login
+            </Button>
           </div>
 
           <div className="lg:hidden">

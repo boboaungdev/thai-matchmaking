@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa"
 
 import { Button } from "@/components/ui/button"
+import { AppName } from "@/components/app-name"
 import { APP_NAME, APP_TAGLINE, CONTACT } from "@/constants"
 
 export function Footer() {
@@ -26,7 +27,7 @@ export function Footer() {
                 className="size-11 shrink-0 rounded-2xl bg-background object-cover shadow-sm"
               />
               <div className="min-w-0">
-                <p className="truncate text-sm font-semibold">{APP_NAME}</p>
+                <AppName className="truncate text-sm font-semibold" />
                 <p className="truncate text-sm text-muted-foreground">
                   {APP_TAGLINE}
                 </p>
@@ -101,7 +102,7 @@ export function Footer() {
           <p>
             Copyright &copy; {new Date().getFullYear()}{" "}
             <Link href="/" className="hover:text-foreground">
-              {APP_NAME}
+              <AppName />
             </Link>
             . All rights reserved.
           </p>
@@ -118,3 +119,4 @@ export function Footer() {
     </footer>
   )
 }
+
