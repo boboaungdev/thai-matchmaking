@@ -47,7 +47,10 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-:root { /* Changed from #fff8f4 to a neutral light gray */
+:root {
+  /* Changed from #fff8f4 to a neutral light gray */
+  --gold: #cfa14f;
+  --pink: #cb5d7a;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -83,7 +86,11 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0); /* Changed from #180d11 to a neutral dark gray */
+  --gold: #cfa14f;
+  --pink: #cb5d7a;
+  --background: oklch(
+    0.145 0 0
+  ); /* Changed from #180d11 to a neutral dark gray */
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);

@@ -75,7 +75,7 @@ export function NavBar() {
           <ThemeToggle />
           <LanguageSwitcher />
           <div className="hidden items-center gap-2 lg:flex">
-            <Button className="rounded-md">Get Started</Button>
+            <Button className="rounded-md">Login</Button>
           </div>
 
           <div className="lg:hidden">
@@ -111,7 +111,7 @@ export function NavBar() {
                   ))}
                   <SheetClose asChild>
                     <div className="flex cursor-not-allowed items-center justify-between rounded-md bg-primary px-3 py-2.5 text-primary-foreground opacity-50">
-                      <span>Get Started</span>
+                      <span>Login</span>
                       <ArrowUpRight className="size-4" />
                     </div>
                   </SheetClose>
