@@ -1,11 +1,12 @@
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
+import React from "react"
 
 import { APP_NAME } from "@/constants"
 
 type PolicyContent = {
   heading: string
-  text: string
+  text: React.ReactNode
 }
 
 type PolicyPageProps = {

@@ -117,10 +117,10 @@ export function NavBar() {
                   ))}
                   <SheetClose asChild>
                     <div
-                      onClick={() => router.push('/#register-interest')}
-                      className="flex cursor-pointer items-center justify-between rounded-md btn-gradient px-3 py-2.5 text-white"
+                      onClick={() => router.push("")}
+                      className="btn-gradient flex cursor-pointer items-center justify-between rounded-md px-3 py-2.5 text-white"
                     >
-                      <span>Register Interest</span>
+                      <span>Login</span>
                       <ArrowUpRight className="size-4" />
                     </div>
                   </SheetClose>

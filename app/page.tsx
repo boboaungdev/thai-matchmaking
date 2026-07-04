@@ -16,7 +16,7 @@ export default function HomePage() {
         className="relative flex h-[80vh] min-h-[500px] flex-col justify-center bg-cover bg-center text-white"
         style={{ backgroundImage: "url(/home-landing.png)" }}
       >
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/20" />
         <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex max-w-md flex-col items-center space-y-6 text-center">
             <Image
@@ -36,7 +36,6 @@ export default function HomePage() {
                   Thailand.
                 </span>
               </p>
-
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               <Button asChild size="lg" className="btn-gradient">
