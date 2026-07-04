@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 import {
   User,
-  Flag,
   MapPin,
   Mail,
   Phone,
@@ -72,159 +71,30 @@ export function RegisterInterestForm() {
 
   return (
     <div className="mx-auto w-full max-w-2xl p-4">
-      <h2 className="text-3xl font-bold mb-2 text-center">Register Your Interest</h2>
-      <p className="text-muted-foreground mb-6 text-center">
+      <h2 className="mb-2 text-center text-3xl font-bold">
+        Register Your Interest
+      </h2>
+      <p className="mb-6 text-center text-muted-foreground">
         Fill out the form below to let us know you&apos;re interested.
         We&apos;ll be in touch.
       </p>
 
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Name</FormLabel>
-                    <FormControl>
-                      <InputGroup>
-                        <InputGroupAddon>
-                          <User className="size-4" />
-                        </InputGroupAddon>
-                        <InputGroupInput
-                          placeholder="Enter your name"
-                          {...field}
-                        />
-                      </InputGroup>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="birthday"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Birthday</FormLabel>
-                    <FormControl>
-                      <InputGroup>
-                        <InputGroupAddon>
-                          <CalendarIcon className="size-4" />
-                        </InputGroupAddon>
-                        <DatePickerInput
-                          value={field.value}
-                          onSelect={field.onChange}
-                        />
-                      </InputGroup>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <FormField
-                control={form.control}
-                name="citizenship"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Citizenship</FormLabel>
-                    <FormControl>
-                      <InputGroup>
-                        <InputGroupAddon>
-                          <Home className="size-4" />
-                        </InputGroupAddon>
-                        <InputGroupInput placeholder="British" {...field} />
-                      </InputGroup>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="location"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Current Location</FormLabel>
-                    <FormControl>
-                      <InputGroup>
-                        <InputGroupAddon>
-                          <MapPin className="size-4" />
-                        </InputGroupAddon>
-                        <InputGroupInput
-                          placeholder="Bangkok, Thailand"
-                          {...field}
-                        />
-                      </InputGroup>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Email</FormLabel>
-                    <FormControl>
-                      <InputGroup>
-                        <InputGroupAddon>
-                          <Mail className="size-4" />
-                        </InputGroupAddon>
-                        <InputGroupInput
-                          type="email"
-                          placeholder="your@example.com"
-                          {...field}
-                        />
-                      </InputGroup>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="phone"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Phone</FormLabel>
-                    <FormControl>
-                      <InputGroup>
-                        <InputGroupAddon>
-                          <Phone className="size-4" />
-                        </InputGroupAddon>
-                        <InputGroupInput
-                          type="tel"
-                          placeholder="+66 123 456 789"
-                          {...field}
-                        />
-                      </InputGroup>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <FormField
               control={form.control}
-              name="message"
+              name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Tell us about yourself</FormLabel>
+                  <FormLabel>Name</FormLabel>
                   <FormControl>
                     <InputGroup>
                       <InputGroupAddon>
-                        <MessageSquare className="size-4" />
+                        <User className="size-4" />
                       </InputGroupAddon>
-                      <InputGroupTextarea
-                        placeholder="What are you looking for in a partner?"
-                        className="min-h-[100px]"
+                      <InputGroupInput
+                        placeholder="Enter your name"
                         {...field}
                       />
                     </InputGroup>
@@ -233,11 +103,145 @@ export function RegisterInterestForm() {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full bg-gradient-to-r from-[#cfa14f] via-[#cb5d7a] to-[#cb5d7a] text-white">
-              Submit
-            </Button>
-          </form>
-        </Form>
+            <FormField
+              control={form.control}
+              name="birthday"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Birthday</FormLabel>
+                  <FormControl>
+                    <InputGroup>
+                      <InputGroupAddon>
+                        <CalendarIcon className="size-4" />
+                      </InputGroupAddon>
+                      <DatePickerInput
+                        value={field.value}
+                        onSelect={field.onChange}
+                      />
+                    </InputGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <FormField
+              control={form.control}
+              name="citizenship"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Citizenship</FormLabel>
+                  <FormControl>
+                    <InputGroup>
+                      <InputGroupAddon>
+                        <Home className="size-4" />
+                      </InputGroupAddon>
+                      <InputGroupInput placeholder="British" {...field} />
+                    </InputGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="location"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Current Location</FormLabel>
+                  <FormControl>
+                    <InputGroup>
+                      <InputGroupAddon>
+                        <MapPin className="size-4" />
+                      </InputGroupAddon>
+                      <InputGroupInput
+                        placeholder="Bangkok, Thailand"
+                        {...field}
+                      />
+                    </InputGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <InputGroup>
+                      <InputGroupAddon>
+                        <Mail className="size-4" />
+                      </InputGroupAddon>
+                      <InputGroupInput
+                        type="email"
+                        placeholder="your@example.com"
+                        {...field}
+                      />
+                    </InputGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Phone</FormLabel>
+                  <FormControl>
+                    <InputGroup>
+                      <InputGroupAddon>
+                        <Phone className="size-4" />
+                      </InputGroupAddon>
+                      <InputGroupInput
+                        type="tel"
+                        placeholder="+66 123 456 789"
+                        {...field}
+                      />
+                    </InputGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+          <FormField
+            control={form.control}
+            name="message"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Tell us about yourself</FormLabel>
+                <FormControl>
+                  <InputGroup>
+                    <InputGroupAddon>
+                      <MessageSquare className="size-4" />
+                    </InputGroupAddon>
+                    <InputGroupTextarea
+                      placeholder="What are you looking for in a partner?"
+                      className="min-h-[100px]"
+                      {...field}
+                    />
+                  </InputGroup>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <Button
+            type="submit"
+            className="w-full bg-gradient-to-r from-[#cfa14f] via-[#cb5d7a] to-[#cb5d7a] text-white"
+          >
+            Submit
+          </Button>
+        </form>
+      </Form>
     </div>
   )
 }

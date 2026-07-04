@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight, MapPin } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -103,9 +103,9 @@ export function UserGallery() {
                 <Link
                   href="/auth?mode=signup"
                   key={user.login.uuid}
-                  className="block"
+                  className="block p-[2px] bg-gradient-to-br from-[#cfa14f] via-[#cb5d7a] to-[#cb5d7a] rounded-lg"
                 >
-                  <Card className="group relative h-[380px] w-[280px] shrink-0 overflow-hidden">
+                  <Card className="group relative h-[380px] w-[280px] shrink-0 overflow-hidden bg-background">
                     <Image
                       src={user.picture.large}
                       alt={`${user.name.first} ${user.name.last}`}
@@ -115,9 +115,10 @@ export function UserGallery() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                     <div className="absolute inset-x-0 bottom-0 p-4 text-white">
                       <p className="text-lg font-semibold">
-                        {user.name.first} {user.name.last}, {user.dob.age}
+                        ID-{user.login.uuid.slice(0, 4).toUpperCase()}, {user.dob.age}
                       </p>
-                      <p className="text-sm">
+                      <p className="text-sm flex items-center gap-1">
+                        <MapPin className="size-3" />
                         {user.location.city}, {user.location.country}
                       </p>
                     </div>

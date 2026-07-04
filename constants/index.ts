@@ -6,6 +6,5 @@ export const CONTACT = {
   email: "contact@thaimatchmaking.com",
   whatsapp: "+66 62 060 4000",
   facebook: "https://facebook.com/thaimatchmaking",
-  telegram: "https://t.me/thaimatchmaking",
   line: "https://line.me/R/ti/p/thaimatchmaking",
 } as const

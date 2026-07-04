@@ -2,7 +2,6 @@ import Link from "next/link"
 import Image from "next/image"
 import {
   FaFacebook,
-  FaTelegram,
   FaLine,
   FaWhatsapp,
   FaEnvelope,
@@ -72,17 +71,7 @@ export function Footer() {
                   Facebook
                 </a>
               </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="sm"
-                className="rounded-full"
-              >
-                <a href={CONTACT.telegram} target="_blank" rel="noreferrer">
-                  <FaTelegram className="size-4" />
-                  Telegram
-                </a>
-              </Button>
+
               <Button
                 asChild
                 variant="outline"
