@@ -21,10 +21,10 @@ export default function HomePage() {
           <div className="flex max-w-md flex-col items-center space-y-6 text-center">
             <Image
               src="/logo.png"
-              alt="App Logo"
-              width={100}
-              height={100}
-             className="mb-4 h-auto w-auto object-contain"
+              alt={`${APP_NAME} Logo`}
+              width={150}
+              height={150}
+              className="mb-4 h-auto w-auto object-contain"
             />
             <AppName className="text-3xl font-bold sm:text-4xl md:text-5xl" />
             <div className="space-y-2">
@@ -33,7 +33,7 @@ export default function HomePage() {
                 Dating in Thailand
               </p>
             </div>
-          <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               <Button
                 asChild
                 size="lg"
