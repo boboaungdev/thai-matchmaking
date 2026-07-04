@@ -29,6 +29,7 @@ import {
   InputGroupTextarea,
 } from "@/components/ui/input-group"
 import { DatePickerInput } from "@/components/ui/date-picker-input"
+import { Spinner } from "@/components/ui/spinner"
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -44,7 +45,9 @@ const formSchema = z.object({
     message: "Location must be at least 2 characters.",
   }),
   email: z.string().email(),
-  phone: z.string().min(10, {
+  phone: z.string().regex(/^\+\d+$/, {
+    message: "Phone number must start with a + sign and contain only digits thereafter.",
+  }).min(10, {
     message: "Phone number must be at least 10 characters.",
   }),
   message: z.string().min(10, {
@@ -55,6 +58,7 @@ const formSchema = z.object({
 export function RegisterInterestForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
+    mode: "onChange",
     defaultValues: {
       name: "",
       citizenship: "",
@@ -236,9 +240,17 @@ export function RegisterInterestForm() {
           />
           <Button
             type="submit"
+            disabled={!form.formState.isValid || form.formState.isSubmitting}
             className="w-full bg-gradient-to-r from-[#cfa14f] via-[#cb5d7a] to-[#cb5d7a] text-white"
           >
-            Submit
+            {form.formState.isSubmitting ? (
+              <>
+                <Spinner className="mr-2" />
+                Submitting...
+              </>
+            ) : (
+              "Submit"
+            )}
           </Button>
         </form>
       </Form>
