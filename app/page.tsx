@@ -35,10 +35,13 @@ export default function HomePage() {
       </section>
 
       <section id="gallery" className="py-16 sm:py-20">
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-8 text-center text-3xl font-bold">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
+          <h2 className="mb-2 text-center text-3xl font-bold">
             Featured Members
           </h2>
+          <p className="text-muted-foreground mb-6 text-center">
+            Meet some of our amazing members.
+          </p>
           <UserGallery />
         </div>
       </section>

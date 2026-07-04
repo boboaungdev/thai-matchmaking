@@ -233,7 +233,7 @@ export function RegisterInterestForm() {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full bg-gradient-to-r from-[#cfa14f] via-[#cb5d7a] to-[#cb5d7a] text-white">
               Submit
             </Button>
           </form>
