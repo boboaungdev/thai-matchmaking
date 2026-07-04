@@ -45,7 +45,7 @@ export function NavBar() {
             priority
           />
           <div className="min-w-0">
-            <AppName className="truncate text-sm leading-5 font-semibold sm:text-[15px]" />
+            <AppName className="truncate text-base font-semibold sm:text-lg" />
             <p className="truncate text-xs text-muted-foreground">
               {APP_TAGLINE}
             </p>

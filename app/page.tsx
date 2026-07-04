@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { APP_NAME, APP_TAGLINE } from "@/constants"
 import { UserGallery } from "@/components/user-gallery"
 import { Faq } from "@/components/faq"
+import { RegisterInterestForm } from "@/components/register-interest-form"
 
 export default function HomePage() {
   return (
@@ -39,6 +40,12 @@ export default function HomePage() {
             Featured Members
           </h2>
           <UserGallery />
+        </div>
+      </section>
+
+      <section id="register-interest" className="py-16 sm:py-20">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <RegisterInterestForm />
         </div>
       </section>
 

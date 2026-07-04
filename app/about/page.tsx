@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card"
 import { Target, Eye, Handshake } from "lucide-react"
 import { FaLinkedin, FaTwitter, FaGlobe } from "react-icons/fa"
-import { Faq } from "@/components/faq"
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -29,23 +29,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Story */}
-      <section className="py-16 sm:py-20">
-        <div className="mx-auto w-full max-w-4xl space-y-4 px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight">Our Story</h2>
-          <p className="text-muted-foreground md:text-lg">
-            Founded in 2024, {APP_NAME} was born from a simple yet profound
-            idea: to create a space where technology serves to deepen human
-            connection, not replace it. In a world of fleeting interactions, we
-            saw the need for a platform that prioritizes genuine compatibility
-            and meaningful relationships. Our journey began with a small team of
-            passionate developers and relationship experts dedicated to building
-            a smarter, more heartfelt way to meet people. Today, we are proud to
-            have helped countless individuals write the first chapter of their
-            new story.
-          </p>
-        </div>
-      </section>
+
 
       {/* Mission, Vision, Values */}
       <section className="py-16 sm:py-20">
@@ -125,87 +109,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Meet the Team */}
-      <section className="py-16 sm:py-20">
-        <div className="mx-auto w-full max-w-5xl space-y-12 px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight">Meet the Team</h2>
-          <div className="grid gap-8 md:grid-cols-3">
-            <Card className="group relative flex flex-col items-center text-center shadow-lg transition-transform duration-300 hover:scale-105">
-              <Avatar className="h-24 w-24">
-                <AvatarImage src="https://github.com/shadcn.png" alt="Sham" />
-                <AvatarFallback>S</AvatarFallback>
-              </Avatar>
-              <CardHeader className="px-0">
-                <CardTitle className="text-xl font-semibold">Sham</CardTitle>
-                <CardDescription className="text-muted-foreground">Co-Founder & CEO</CardDescription>
-              </CardHeader>
-              <div className="absolute inset-0 flex items-center justify-center space-x-4 rounded-xl bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <Link href="#">
-                  <FaLinkedin className="h-6 w-6 text-white" />
-                </Link>
-                <Link href="#">
-                  <FaTwitter className="h-6 w-6 text-white" />
-                </Link>
-                <Link href="#">
-                  <FaGlobe className="h-6 w-6 text-white" />
-                </Link>
-              </div>
-            </Card>
-            <Card className="group relative flex flex-col items-center text-center shadow-lg transition-transform duration-300 hover:scale-105">
-              <Avatar className="h-24 w-24">
-                <AvatarImage
-                  src="https://github.com/vercel.png"
-                  alt="Jane Smith"
-                />
-                <AvatarFallback>JS</AvatarFallback>
-              </Avatar>
-              <CardHeader className="px-0">
-                <CardTitle className="text-xl font-semibold">Jane Smith</CardTitle>
-                <CardDescription className="text-muted-foreground">Head of Matchmaking</CardDescription>
-              </CardHeader>
-              <div className="absolute inset-0 flex items-center justify-center space-x-4 rounded-xl bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <Link href="#">
-                  <FaLinkedin className="h-6 w-6 text-white" />
-                </Link>
-                <Link href="#">
-                  <FaTwitter className="h-6 w-6 text-white" />
-                </Link>
-              </div>
-            </Card>
-            <Card className="group relative flex flex-col items-center text-center shadow-lg transition-transform duration-300 hover:scale-105">
-              <Avatar className="h-24 w-24">
-                <AvatarImage src="https://github.com/next.png" alt="Bo Bo" />
-                <AvatarFallback>Bo Bo</AvatarFallback>
-              </Avatar>
-              <CardHeader className="px-0">
-                <CardTitle className="text-xl font-semibold">Bo Bo</CardTitle>
-                <CardDescription className="text-muted-foreground">Lead Developer</CardDescription>
-              </CardHeader>
-              <div className="absolute inset-0 flex items-center justify-center space-x-4 rounded-xl bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <Link href="#">
-                  <FaLinkedin className="h-6 w-6 text-white" />
-                </Link>
-                <Link href="#">
-                  <FaTwitter className="h-6 w-6 text-white" />
-                </Link>
-                <Link href="#">
-                  <FaGlobe className="h-6 w-6 text-white" />
-                </Link>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
 
-      {/* FAQ */}
-      <section className="py-16 sm:py-20">
-        <div className="max_w-4xl mx-auto w-full space-y-8 px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center text-3xl font-bold tracking-tight">
-            Frequently Asked Questions
-          </h2>
-          <Faq />
-        </div>
-      </section>
+
+
 
       {/* CTA */}
       <section className="py-16 sm:py-20">
