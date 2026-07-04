@@ -62,7 +62,7 @@ export default function HomePage() {
           <p className="mb-6 text-center text-muted-foreground">
             Meet some of our amazing members.
           </p>
-          <UserGallery />
+          <UserGallery layout="scroll" />
         </div>
       </section>
 
