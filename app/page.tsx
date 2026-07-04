@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { APP_NAME, APP_TAGLINE } from "@/constants"
 import { UserGallery } from "@/components/user-gallery"
@@ -16,19 +17,32 @@ export default function HomePage() {
       >
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 space-y-6">
+          <Image
+            src="/logo.png"
+            alt="App Logo"
+            width={100}
+            height={100}
+            className="mx-auto mb-4 object-contain block w-auto h-auto"
+          />
           <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
             {APP_NAME}
           </h1>
           <p className="text-lg text-white/90 md:text-xl">{APP_TAGLINE}</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg">Get Started</Button>
+            <Button
+              asChild
+              size="lg"
+              className="bg-gradient-to-r from-[#cfa14f] via-[#cb5d7a] to-[#cb5d7a] text-white"
+            >
+              <Link href="#register-interest">Register Interest</Link>
+            </Button>
             <Button
               asChild
               size="lg"
               variant="outline"
               className="bg-transparent text-white transition-opacity hover:bg-white/10 hover:opacity-100"
             >
-              <Link href="#gallery">Learn More</Link>
+              <Link href="/service">Learn More</Link>
             </Button>
           </div>
         </div>

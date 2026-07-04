@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import { format } from "date-fns"
-import { SelectSingleEventHandler } from "react-day-picker"
 
 import { cn, calculateAge } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -15,7 +14,7 @@ import {
 
 interface DatePickerInputProps {
   value: Date | undefined
-  onSelect: SelectSingleEventHandler | undefined
+  onSelect: ((date: Date | undefined) => void) | undefined
 }
 
 export function DatePickerInput({ value, onSelect }: DatePickerInputProps) {
@@ -38,7 +37,7 @@ export function DatePickerInput({ value, onSelect }: DatePickerInputProps) {
           mode="single"
           selected={value}
           onSelect={onSelect}
-          initialFocus
+
           captionLayout="dropdown"
         />
       </PopoverContent>
