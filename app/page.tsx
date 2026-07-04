@@ -37,7 +37,7 @@ export default function HomePage() {
               <Button
                 asChild
                 size="lg"
-                className="bg-gradient-to-r from-[#cfa14f] via-[#cb5d7a] to-[#cb5d7a] text-white"
+                className="btn-gradient"
               >
                 <Link href="#register-interest">Register Interest</Link>
               </Button>

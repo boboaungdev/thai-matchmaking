@@ -182,4 +182,9 @@
     background-size: 200% 200%;
     animation: bg-pan 10s ease-in-out infinite;
   }
+
+  .btn-gradient {
+    background-image: linear-gradient(to right, var(--gold), var(--pink));
+    color: white; /* Or another contrasting color */
+  }
 }

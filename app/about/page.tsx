@@ -156,14 +156,14 @@ export default function AboutPage() {
           </h2>
           <p className="text-muted-foreground md:text-lg">
             Join our community today and start your journey towards finding a
-            meaningful connection. Signing up is easy and free.
+            meaningful connection.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <Button asChild size="lg">
-              <Link href="/auth">Sign Up Now</Link>
+            <Button asChild size="lg" className="btn-gradient">
+              <Link href="/#register-interest">Register Interest</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link href="/register-interest">Register Your Interest</Link>
+              <Link href="">Login</Link>
             </Button>
           </div>
         </div>
