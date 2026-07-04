@@ -72,7 +72,7 @@ export default function AboutPage() {
           <div className="grid gap-8 md:grid-cols-3">
             <Card>
               <CardHeader className="flex flex-col items-center">
-                <Target className="mb-2 h-6 w-6 text-blue-500" />
+                <Target className="mb-2 h-6 w-6 text-[var(--gold)]" />
                 <CardTitle className="text-center">Our Mission</CardTitle>
               </CardHeader>
               <CardContent>
@@ -98,7 +98,7 @@ export default function AboutPage() {
 
             <Card>
               <CardHeader className="flex flex-col items-center">
-                <Eye className="mb-2 h-6 w-6 text-purple-500" />
+                <Eye className="mb-2 h-6 w-6 text-[var(--gold)]" />
                 <CardTitle className="text-center">Our Vision</CardTitle>
               </CardHeader>
               <CardContent>
@@ -120,7 +120,7 @@ export default function AboutPage() {
 
             <Card>
               <CardHeader className="flex flex-col items-center">
-                <Handshake className="mb-2 h-6 w-6 text-green-500" />
+                <Handshake className="mb-2 h-6 w-6 text-[var(--gold)]" />
                 <CardTitle className="text-center">Our Values</CardTitle>
               </CardHeader>
               <CardContent>

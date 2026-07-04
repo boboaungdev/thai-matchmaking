@@ -29,16 +29,17 @@ export default function HomePage() {
             <AppName className="text-3xl font-bold sm:text-4xl md:text-5xl" />
             <div className="space-y-2">
               <p className="text-lg text-white/90 md:text-xl">{APP_TAGLINE}</p>
-              <p className="text-lg text-white/90 md:text-xl">
-                Dating in Thailand
+
+              <p className="text-lg font-bold md:text-xl">
+                <span className="text-gradient">
+                  Real People. Real Relationships. Personally Matched in
+                  Thailand.
+                </span>
               </p>
+
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                asChild
-                size="lg"
-                className="btn-gradient"
-              >
+              <Button asChild size="lg" className="btn-gradient">
                 <Link href="#register-interest">Register Interest</Link>
               </Button>
               <Button

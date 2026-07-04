@@ -24,7 +24,7 @@ import { cn } from "@/lib/utils"
 const SITE_NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Service", href: "#" },
+  { label: "Service", href: "/service" },
   { label: "Gallery", href: "#gallery" },
 ] as const
 
@@ -116,8 +116,11 @@ export function NavBar() {
                     </SheetClose>
                   ))}
                   <SheetClose asChild>
-                    <div className="flex cursor-not-allowed items-center justify-between rounded-md bg-primary px-3 py-2.5 text-primary-foreground opacity-50">
-                      <span>Login</span>
+                    <div
+                      onClick={() => router.push('/#register-interest')}
+                      className="flex cursor-pointer items-center justify-between rounded-md btn-gradient px-3 py-2.5 text-white"
+                    >
+                      <span>Register Interest</span>
                       <ArrowUpRight className="size-4" />
                     </div>
                   </SheetClose>

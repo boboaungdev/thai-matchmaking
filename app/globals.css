@@ -187,4 +187,11 @@
     background-image: linear-gradient(to right, var(--gold), var(--pink));
     color: white; /* Or another contrasting color */
   }
+
+  .text-gradient {
+    background: linear-gradient(to right, var(--gold), var(--pink));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 }

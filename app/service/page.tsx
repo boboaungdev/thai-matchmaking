@@ -1,58 +1,122 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { AppName } from "@/components/app-name"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 export default function ServicePage() {
   return (
-    <section className="container py-12 md:py-24 space-y-12">
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">Our Services</h1>
-        <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-          We offer a range of personalized services to help you find the perfect match.
-        </p>
-      </div>
-
-      <div className="grid gap-8 md:grid-cols-3">
-        <Card>
-          <CardHeader>
-            <CardTitle>Personalized Matchmaking</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <CardDescription>
-              Our core service. We take the time to understand you and your preferences to introduce you to compatible partners.
-            </CardDescription>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Date Coaching</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <CardDescription>
-              Feeling nervous or unsure about dating? Our experienced coaches are here to guide you and boost your confidence.
-            </CardDescription>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Profile Enhancement</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <CardDescription>
-              We'll help you create a compelling and authentic profile that showcases your best self and attracts the right people.
-            </CardDescription>
-          </CardContent>
-        </Card>
-      </div>
-
-      <div className="text-center space-y-4">
-        <h2 className="text-3xl font-bold tracking-tighter">Ready to find your match?</h2>
-        <Button asChild size="lg">
-          <Link href="/auth?mode=signup">Get Started</Link>
-        </Button>
-      </div>
-    </section>
+    <main className="mb-12 space-y-12">
+      <section className="bg-animated-gradient flex min-h-[300px] py-12 md:py-24">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h1 className="mb-8 text-center text-4xl font-bold tracking-tighter md:text-5xl">
+            Our Services
+          </h1>
+          <div className="mx-auto max-w-3xl space-y-4 text-left">
+            <p className="text-muted-foreground md:text-xl">
+              <AppName /> takes a personalised approach to matchmaking.
+              Carefully learning about your preferences, values and relationship
+              goals. Every introduction is thoughtfully selected to ensure
+              genuine compatibility and meaningful connection.
+            </p>
+            <p className="text-center text-lg font-bold md:text-xl">
+              <span className="text-gradient">
+                Real People. Real Relationships. Personally Matched in Thailand.
+              </span>
+            </p>
+            <h2 className="pt-8 text-3xl font-bold tracking-tight">
+              THE PROCESS
+            </h2>
+            <ul className="list-inside list-disc space-y-2 text-muted-foreground md:text-xl">
+              <li>
+                The member initially registers they interest in our service.
+              </li>
+              <li>
+                The member can start / complete the application profile online
+                or via a call with the matchmaker.
+              </li>
+              <li>
+                The matchmaker will call you to discuss your aims and goals, and
+                to explain the service.
+              </li>
+              <li>
+                The matchmaker during this call will understand what kind of
+                lady will fit your profile by completing your application
+                form/profile.
+              </li>
+              <li>
+                After the meeting, the matchmaker will then review which ladies
+                will the most suitable.
+              </li>
+              <li>
+                Profiles will be sent the member first for approval and then the
+                members profile will be forwarded to the ladies.
+              </li>
+              <li>
+                The matchmaker will then follow up with both parties to discuss
+                in more detail the potential compatibility.
+              </li>
+              <li>
+                When both parties agree, a video call is arranged, where the
+                matchmaker will be present to provide any assistance when
+                necessary
+              </li>
+              <li>
+                After the video call, the matchmaker will then speak to both
+                parties to understand if there was a connection.
+              </li>
+              <li>
+                If both parties agreed to move matters to the next stage,
+                another video call can take place or WhatsApp numbers can be
+                exchanged. If one party fails to connect, the matchmaker will
+                source an alternative match.
+              </li>
+              <li>
+                The matchmaker will continue to watch and support the
+                connection, assisting either party where necessary.
+              </li>
+              <li>
+                Follow ups will be done to check on the progress of the
+                connection.
+              </li>
+            </ul>
+            <p className="pt-8 text-center text-lg font-bold md:text-xl">
+              <span className="text-gradient">
+                Connecting Hearts Across Thailand and Beyond.
+              </span>
+            </p>
+            <h2 className="pt-8 text-3xl font-bold tracking-tight">FEES</h2>
+            <p className="text-muted-foreground md:text-xl">
+              <AppName className="inline" /> structured fee service and payment
+              terms for male and female members varies. Our friendly team can
+              discuss with you in more detail once you have registered your
+              interest.
+            </p>
+            <p className="pt-4 text-center text-lg font-bold md:text-xl">
+              <span className="text-gradient">
+                Beyond Dating Apps — Professional One-to-One Matchmaking
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="register-interest" className="py-16 sm:py-20">
+        <div className="mx-auto w-full max-w-4xl space-y-6 px-4 text-center sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight">
+            Ready to Find Your Match?
+          </h2>
+          <p className="text-muted-foreground md:text-lg">
+            Join our community today and start your journey towards finding a
+            meaningful connection.
+          </p>
+          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+            <Button asChild size="lg" className="btn-gradient">
+              <Link href="/#register-interest">Register Interest</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <Link href="">Login</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+    </main>
   )
 }
