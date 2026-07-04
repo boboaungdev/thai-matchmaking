@@ -18,13 +18,13 @@ export default function HomePage() {
       >
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-md space-y-6 text-center sm:mx-0 sm:text-left">
+          <div className="flex max-w-md flex-col items-center space-y-6 text-center">
             <Image
               src="/logo.png"
               alt="App Logo"
               width={100}
               height={100}
-              className="mx-auto mb-4 block h-auto w-auto object-contain sm:mx-0"
+             className="mb-4 h-auto w-auto object-contain"
             />
             <AppName className="text-3xl font-bold sm:text-4xl md:text-5xl" />
             <div className="space-y-2">
@@ -33,7 +33,7 @@ export default function HomePage() {
                 Dating in Thailand
               </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-4 sm:justify-start">
+          <div className="flex flex-wrap justify-center gap-4">
               <Button
                 asChild
                 size="lg"
