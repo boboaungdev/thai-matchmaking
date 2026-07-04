@@ -1,4 +1,4 @@
-import { APP_NAME } from "@/constants"
+import { AppName } from "@/components/app-name"
 import {
   Card,
   CardContent,
@@ -7,29 +7,64 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Target, Eye, Handshake } from "lucide-react"
-import { FaLinkedin, FaTwitter, FaGlobe } from "react-icons/fa"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 export default function AboutPage() {
   return (
     <main className="mb-12 space-y-12">
-      <section className="bg-animated-gradient flex min-h-[300px] items-center justify-center py-12 md:py-24">
-        <div className="mx-auto w-full max-w-7xl space-y-4 px-4 text-center sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tighter md:text-5xl">
+      <section className="bg-animated-gradient flex min-h-[300px] py-12 md:py-24">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Centered title */}
+          <h1 className="mb-8 text-center text-4xl font-bold tracking-tighter md:text-5xl">
             About Us
           </h1>
-          <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-            Welcome to {APP_NAME} – where connections are made and stories
-            begin. We are dedicated to bringing people together in meaningful
-            ways.
-          </p>
+
+          {/* Left-aligned content */}
+          <div className="mx-auto max-w-3xl space-y-4 text-left">
+            <p className="text-muted-foreground md:text-xl">
+              Welcome to <AppName /> – where connections are made and stories
+              begin. We are dedicated to bringing people together in meaningful
+              ways.
+            </p>
+
+            <p className="text-muted-foreground md:text-xl">
+              <AppName className="inline" />
+              &nbsp;you don&apos;t have time for dating apps that offer no real
+              value, and you don&apos;t have the time to engage with individuals
+              who aren&apos;t the right fit for YOU.
+            </p>
+
+            <p className="text-muted-foreground md:text-xl">
+              <AppName className="inline" />
+              &nbsp;understands you are at a stage in your life where everything
+              is in place, and all that&apos;s missing is the right
+              person—someone with whom you can share the rest of your life in
+              happiness.
+            </p>
+
+            <p className="text-muted-foreground md:text-xl">
+              <AppName className="inline" />
+              &nbsp;is a personalised matchmaking service dedicated to creating
+              a genuine, meaningful connection between Thai women and YOU.
+            </p>
+
+            <p className="text-muted-foreground md:text-xl">
+              <AppName className="inline" />
+              &nbsp;takes the time to understand each individual&apos;s values,
+              lifestyle, and relationship goals to connect you with your future
+              life partner.
+            </p>
+
+            <p className="text-muted-foreground md:text-xl">
+              <AppName className="inline" />
+              &nbsp;approach is respectful and discreet, ensuring every
+              introduction is made with care and integrity.
+            </p>
+          </div>
         </div>
       </section>
-
-
 
       {/* Mission, Vision, Values */}
       <section className="py-16 sm:py-20">
@@ -51,6 +86,10 @@ export default function AboutPage() {
                     <li>
                       Provide an inclusive environment where everyone feels
                       valued and respected.
+                    </li>
+                    <li>
+                      Is to offer YOU an unparalleled matchmaking service that
+                      meets with your expectations.
                     </li>
                   </ul>
                 </CardDescription>
@@ -109,10 +148,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-
-
-
-
       {/* CTA */}
       <section className="py-16 sm:py-20">
         <div className="mx-auto w-full max-w-4xl space-y-6 px-4 text-center sm:px-6 lg:px-8">
@@ -123,9 +158,14 @@ export default function AboutPage() {
             Join our community today and start your journey towards finding a
             meaningful connection. Signing up is easy and free.
           </p>
-          <Button asChild size="lg">
-            <Link href="/auth">Sign Up Now</Link>
-          </Button>
+          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+            <Button asChild size="lg">
+              <Link href="/auth">Sign Up Now</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <Link href="/register-interest">Register Your Interest</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </main>
