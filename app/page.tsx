@@ -13,49 +13,53 @@ export default function HomePage() {
   return (
     <main>
       <section
-        className="relative flex h-[80vh] min-h-[500px] flex-col items-start justify-center bg-cover bg-center px-4 text-white"
+        className="relative flex h-[80vh] min-h-[500px] flex-col justify-center bg-cover bg-center text-white"
         style={{ backgroundImage: "url(/home-landing.png)" }}
       >
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 space-y-6 text-center max-w-md">
-          <Image
-            src="/logo.png"
-            alt="App Logo"
-            width={100}
-            height={100}
-            className="mx-auto mb-4 object-contain block w-auto h-auto"
-          />
-          <AppName className="text-3xl font-bold sm:text-4xl md:text-5xl" />
-          <div className="space-y-2">
-            <p className="text-lg text-white/90 md:text-xl">{APP_TAGLINE}</p>
-            <p className="text-lg text-white/90 md:text-xl">Dating in Thailand</p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button
-              asChild
-              size="lg"
-              className="bg-gradient-to-r from-[#cfa14f] via-[#cb5d7a] to-[#cb5d7a] text-white"
-            >
-              <Link href="#register-interest">Register Interest</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="bg-transparent text-white transition-opacity hover:bg-white/10 hover:opacity-100"
-            >
-              <Link href="/service">Learn More</Link>
-            </Button>
+        <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-md space-y-6 text-center sm:mx-0 sm:text-left">
+            <Image
+              src="/logo.png"
+              alt="App Logo"
+              width={100}
+              height={100}
+              className="mx-auto mb-4 block h-auto w-auto object-contain sm:mx-0"
+            />
+            <AppName className="text-3xl font-bold sm:text-4xl md:text-5xl" />
+            <div className="space-y-2">
+              <p className="text-lg text-white/90 md:text-xl">{APP_TAGLINE}</p>
+              <p className="text-lg text-white/90 md:text-xl">
+                Dating in Thailand
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4 sm:justify-start">
+              <Button
+                asChild
+                size="lg"
+                className="bg-gradient-to-r from-[#cfa14f] via-[#cb5d7a] to-[#cb5d7a] text-white"
+              >
+                <Link href="#register-interest">Register Interest</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="bg-transparent text-white transition-opacity hover:bg-white/10 hover:opacity-100"
+              >
+                <Link href="/service">Learn More</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="gallery" className="py-16 sm:py-20">
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
+        <div className="mx-auto w-full max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
           <h2 className="mb-2 text-center text-3xl font-bold">
             Featured Members
           </h2>
-          <p className="text-muted-foreground mb-6 text-center">
+          <p className="mb-6 text-center text-muted-foreground">
             Meet some of our amazing members.
           </p>
           <UserGallery />
